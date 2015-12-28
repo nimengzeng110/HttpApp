@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	<!-- name包名,自定义唯一就可以;
+		extends继承包名,目前约定strutsdefault -->
+	<package name="hello-demo" namespace="/demo" 
+		extends="struts-default">
+		<!-- name请求名;class类名;method方法名 -->
+		<action name="hello" 
+			class="org.tarena.action.HelloAction" 
+			method="sayHello">
+			<result name="ok" type="dispatcher">
+				/WEB-INF/hello.jsp
+			</result>
+		</action>
+		
+	</package>
+</struts>
